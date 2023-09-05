@@ -44,6 +44,7 @@ repos:
     language: system
     types: [python]
 
+<<<<<<< HEAD
   - id: flake8
     name: Check with Flake8
     entry: poetry run flake8
@@ -52,6 +53,8 @@ repos:
     types: [python]
     args: [--count, .]
 
+=======
+>>>>>>> 6fc632d (init)
   - id: mypy
     name: Validate types with MyPy
     entry: poetry run mypy

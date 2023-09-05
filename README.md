@@ -84,6 +84,7 @@ FARM_API_ENVIRONMENT="dev"
 
 You can read more about BaseSettings class here: https://pydantic-docs.helpmanual.io/usage/settings/
 
+<<<<<<< HEAD
 ## Pre-commit
 
 To install pre-commit simply run inside the shell:
@@ -103,6 +104,8 @@ By default it runs:
 
 You can read more about pre-commit here: https://pre-commit.com/
 
+=======
+>>>>>>> 6fc632d (init)
 
 ## Running tests
 
