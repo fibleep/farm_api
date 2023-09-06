@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-"""Settings module."""
-
->>>>>>> 6fc632d (init)
 import enum
 from pathlib import Path
 from tempfile import gettempdir

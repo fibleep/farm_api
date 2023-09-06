@@ -1,6 +1,10 @@
 # farm_api
 
-This project was generated using fastapi_template.
+## IMPORTANT
+
+Run ```
+docker run --name redis-db -p 6379:6379 -d redis```
+to run a redis database
 
 ## Poetry
 
@@ -18,7 +22,7 @@ This will start the server on the configured host.
 
 You can find swagger documentation at `/api/docs`.
 
-You can read more about poetry here: https://python-poetry.org/
+You can read more about poetry here: <https://python-poetry.org/>
 
 ## Docker
 
@@ -76,18 +80,21 @@ variable to configure the value. This behaviour can be changed by overriding `en
 in `farm_api.settings.Settings.Config`.
 
 An example of .env file:
+
 ```bash
 FARM_API_RELOAD="True"
 FARM_API_PORT="8000"
 FARM_API_ENVIRONMENT="dev"
 ```
 
-You can read more about BaseSettings class here: https://pydantic-docs.helpmanual.io/usage/settings/
+You can read more about BaseSettings class here: <https://pydantic-docs.helpmanual.io/usage/settings/>
 
 <<<<<<< HEAD
+
 ## Pre-commit
 
 To install pre-commit simply run inside the shell:
+
 ```bash
 pre-commit install
 ```
@@ -96,13 +103,13 @@ pre-commit is very useful to check your code before publishing it.
 It's configured using .pre-commit-config.yaml file.
 
 By default it runs:
+
 * black (formats your code);
 * mypy (validates types);
 * isort (sorts imports in all files);
 * flake8 (spots possible bugs);
 
-
-You can read more about pre-commit here: https://pre-commit.com/
+You can read more about pre-commit here: <https://pre-commit.com/>
 
 =======
 >>>>>>> 6fc632d (init)
@@ -118,8 +125,8 @@ docker-compose -f deploy/docker-compose.yml -f deploy/docker-compose.dev.yml --p
 
 For running tests on your local machine.
 
-
 2. Run the pytest.
+
 ```bash
 pytest -vv .
 ```

@@ -1,12 +1,11 @@
 from celery import signals
 from celery.result import AsyncResult
-from celery_worker import generate_text_task
 from fastapi import APIRouter
-from model_loader import ModelLoader
 
+from farm_api.web.api.textgen.utils import generate_output
 from services.celery import make_celery
 
-from .models import ChatItem
+from .models import ChatItem, ModelLoader
 
 router = APIRouter()
 
@@ -48,5 +47,10 @@ def setup_model() -> None:
 
 
 @celery.task
-def generate_task(prompt: str) -> str:
-    return "hello world"
+def generate_text_task(prompt: str) -> str:
+    time, memory, outputs = generate_output(
+        prompt,
+        model_loader.model,
+        model_loader.tokenizer,
+    )
+    return model_loader.tokenizer.decode(outputs[0]), time, memory

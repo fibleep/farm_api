@@ -21,6 +21,10 @@ yarl = "^1.9.2"
 ujson = "^5.8.0"
 redis = {version = "^4.6.0", extras = ["hiredis"]}
 httptools = "^0.6.0"
+celery = "4.4.5"
+torch = "^2.0.1"
+transformers = "^4.33.0"
+celery-worker = "^0.0.6"
 
 
 [tool.poetry.dev-dependencies]
